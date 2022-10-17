@@ -18,7 +18,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <style>
     body {
       height: 1300px;
@@ -62,8 +63,27 @@
         text-align: center;
         font-size: 2em;
       }
-    }
 
+      #fromToWhere {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+     
+    }
+    @media only screen and (max-width: 1180px){
+      #fetures{
+      flex-direction: column;
+      
+    }
+      .box{
+        background-color: antiquewhite;
+        margin-bottom: 20px;
+        width: 300px;
+        
+      }
+    }
     @media only screen and (max-width: 460px) {
       .resHola {
         font-size: 5em;
@@ -74,6 +94,7 @@
       .resHola {
         font-size: 4em;
       }
+
     }
 
     .section2 {
@@ -88,41 +109,96 @@
       /* background-color: #222222; */
     }
 
-    #quotesParagraph {
+    .quotesParagraph{
 
       text-align: center;
       /* border: 2px solid red; */
+      padding: 15px;
       width: 100%;
       height: 15%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
     }
 
+    .quotesParagraph2{
+      text-align: center;
+      /* border: 2px solid red; */
+      padding: 30px;
+      width: 100%;
+      height:100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      
+      justify-content: center;
+      /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    }
+
+    .box{
+      /* display: inline-block; */
+      width: inherit;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      border: solid rgb(0, 0, 0); 
+      /* margin-right: 4px; */
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      
+    }
+   
+    
     .shadow-custom {
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .25), 0 3px 10px 5px rgba(0, 0, 0, 0.05) !important;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
     #tem {
       margin-bottom: 400px;
+
     }
 
     .holaTwo {
-      background: #FF0000;
+      /* background: #FF0000;
       background: linear-gradient(to left, #FF0000 0%, #000000 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; */
+      background: #121FCF;
+      background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    #destinationImg{
+
+    #destinationImg {
       width: 4em;
     }
-    #fromToWhere{
+
+    #fromToWhere {
       display: flex;
       flex-direction: row;
-      gap: 0px;
+      justify-content: center;
+
     }
+
+    #palceHolader {
+      width: 2em;
+    }
+
+    #section2Div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
+    }
+
+    
+
+    
   </style>
 </head>
 
@@ -160,6 +236,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Book Ticket</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Latest Bus</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">About Us</a>
@@ -217,96 +296,263 @@
   </div>
 
 
-  <div class="conatiner" id="tem">
-    <div class="section2  my-5 container" style="width: 100%; border: 2px solid red; " id="quotesParagraph">
+  <div class="conatiner" id="tem" style="border: 2px solid red;">
+    <div class="section2  my-5 container quotesParagraph" style="width: 100%; border:solid #CF1512;">
 
-      <img src="./img/bus.png" class="img-fluid rounded mb-4"
-        alt="Townhouses and Skyscrapers" id="destinationImg"/>
-      <p class="h2 mb-4 ">THE JOURNEY</p>
+      <img src="./img/travel-luggage.png" class="img-fluid rounded mb-4 " alt="Townhouses and Skyscrapers"
+        id="destinationImg" />
+      <p class="h2 mb-4 holaTwo" style="align-text:center;">THE JOURNEY</p>
 
-      <p class="h5 text-start">Journey isn’t always pretty. It isn’t always comfortable. Sometimes it hurts, it even breaks your
+      <p class="h5 text-start" style="align-text:center;">Journey isn’t always pretty. It isn’t always comfortable. Sometimes it hurts, it even
+        breaks your
         heart. But that’s okay. The journey changes you; it should change you. It leaves marks on your memory, on your
         consciousness, on your heart, and on your body. You take something with you. Hopefully, you leave something good
         behind.Start your journey with <span class="text-white holaTwo">My Roadster</span> on single click.</p>
     </div>
-    <div class="conatiner" style="border:2px solid red ;" >
-      <div class="container" id="fromToWhere">
 
 
-
-        
-          
-            <div class="form-outline  d-inline-flex w-25">
-              <input type="text" id="form3Example1" class="form-control " />
-              <label class="form-label" for="form3Example1">First name</label>
-            </div>
+    <div class="section2  my-5 container quotesParagraph2" style="width: 100%; border:solid #CF1512;" id="fetures">
+        <div class="box content1 mx-4">
+          <div class="bg-image hover-overlay ripple  mb-3">
+            <img src="./img/calendar-1763587_1280.png" class="img-fluid my-4"/>
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(57, 192, 237, 0.2);"></div>
+            </a>
           </div>
-          <div class="col">
-            <div class="form-outline d-inline-flex w-25">
-              <input type="text" id="form3Example2" class="form-control" />
-              <label class="form-label" for="form3Example2">Last name</label>
-            </div>
-          
-        
-      
-       
-      
-        
-       
+
+          <p class="h4" style="text-align:center; text-overflow: inherit;">Presheduled Bus List</p>
+
+          <p class="h6 text-center" style="text-align:center;">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            
+        </div>
+        <div class="box content2 mx-4">
+
+
+          <div class="bg-image hover-overlay ripple mb-3">
+            <img src="./img/looping-2324922_1920.png" class="img-fluid" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(57, 192, 237, 0.2);"></div>
+            </a>
+          </div>
+
+          <p class="h4" style="text-align:center;">Latest Bus List</p>
+
+          <p class="h6" style="text-align:center;">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
 
+        <div class="box content3 mx-4">
 
 
-
-
-  </div>
-
-  <div class="foot stick-bottom">
-    <div class="footer-dark">
-      <footer>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-md-3 item">
-              <h3 class="hola">Services</h3>
-              <ul>
-                <li><a href="#">Web design</a></li>
-                <li><a href="#">Development</a></li>
-                <li><a href="#">Hosting</a></li>
-              </ul>
-            </div>
-            <div class="col-sm-6 col-md-3 item">
-              <h3 class="hola">About</h3>
-              <ul>
-                <li><a href="#">Company</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Careers</a></li>
-              </ul>
-            </div>
-            <div class="col-md-6 item text">
-              <h3 class="hola">My Roadster</h3>
-              <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus
-                elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
-            </div>
-            <div class="col item social"><a href=""><i class="icon ion-social-facebook"></i></a><a href="#"><i
-                  class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a
-                href="#"><i class="icon ion-social-instagram"></i></a></div>
+          <div class="bg-image hover-overlay ripple mb-3">
+            <img src="./img/ticket.jpg" class="img-fluid" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(57, 192, 237, 0.2);"></div>
+            </a>
           </div>
-          <p class="copyright">My Roadster © 2018</p>
+
+
+          <p class="h4" style="text-align:center;">Ticket Booking</p>
+
+          <p class="h6" style="text-align:center;">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
-      </footer>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
-  </div>
-  <!-- End your project here-->
 
-  <!-- MDB -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Custom scripts -->
-  <script type="text/javascript"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  </body>
+
+    <div class="container" style="border: 2px solid red;" id="section2Div">
+      <div class="container p-3" id="fromToWhere">
+
+
+        <div class="fromWhere From ">
+          <div class="form-outline">
+            <input type="text" id="form12" class="form-control " />
+            <label class="form-label" for="form12">From</label>
+          </div>
+        </div>
+        <div class="fromWhere placeHolder mx-4">
+          <img src="./img/destination.png" alt="img.jpg" id="palceHolader">
+        </div>
+        <div class="fromWhere To">
+          <div class="form-outline">
+            <input type="text" id="form12" class="form-control" />
+            <label class="form-label" for="form12">To</label>
+          </div>
+        </div>
+        <div class="fromWhere button mx-3 mb-0">
+          <button type="button" class="btn btn-primary">Search</button>
+        </div>
+
+
+
+      </div>
+      <div class="container text-start p-4 px-2" style="">
+        <p class="h3 mb-4">Bus List</p>
+        <div class="listOfBus" >
+
+
+
+
+          <div class="row">
+
+            <div class="col-sm-6 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Miraj-Ichalkaranji</h5>
+                  <p class="card-text">Time of bus is 10:00-12:00</p>
+                  <a href="#" class="btn btn-primary">More Details</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-sm-6 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Miraj-Ichalkaranji</h5>
+                  <p class="card-text">Time of bus is 10:00-12:00</p>
+                  <a href="#" class="btn btn-primary">More Details</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Miraj-Ichalkaranji</h5>
+                  <p class="card-text">Time of bus is 10:00-12:00</p>
+                  <a href="#" class="btn btn-primary">More Details</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Miraj-Ichalkaranji</h5>
+                  <p class="card-text">Time of bus is 10:00-12:00</p>
+                  <a href="#" class="btn btn-primary">More Details</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Miraj-Ichalkaranji</h5>
+                  <p class="card-text">Time of bus is 10:00-12:00</p>
+                  <a href="#" class="btn btn-primary">More Details</a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-sm-6 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Miraj-Ichalkaranji</h5>
+                  <p class="card-text">Time of bus is 10:00-12:00</p>
+                  <a href="#" class="btn btn-primary">More Details</a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-sm-6 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Miraj-Ichalkaranji</h5>
+                  <p class="card-text">Time of bus is 10:00-12:00</p>
+                  <a href="#" class="btn btn-primary">More Details</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Miraj-Ichalkaranji</h5>
+                  <p class="card-text">Time of bus is 10:00-12:00</p>
+                  <a href="#" class="btn btn-primary">More Details</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Miraj-Ichalkaranji</h5>
+                  <p class="card-text">Time of bus is 10:00-12:00</p>
+                  <a href="#" class="btn btn-primary">More Details</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Miraj-Ichalkaranji</h5>
+                  <p class="card-text">Time of bus is 10:00-12:00</p>
+                  <a href="#" class="btn btn-primary">More Details</a>
+                </div>
+              </div>
+            </div>
+            
+
+
+
+
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="foot stick-bottom">
+      <div class="footer-dark">
+        <footer>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-md-3 item">
+                <h3 class="hola">Services</h3>
+                <ul>
+                  <li><a href="#">Web design</a></li>
+                  <li><a href="#">Development</a></li>
+                  <li><a href="#">Hosting</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-6 col-md-3 item">
+                <h3 class="hola">About</h3>
+                <ul>
+                  <li><a href="#">Company</a></li>
+                  <li><a href="#">Team</a></li>
+                  <li><a href="#">Careers</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 item text">
+                <h3 class="hola">My Roadster</h3>
+                <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus
+                  elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+              </div>
+              <div class="col item social"><a href=""><i class="icon ion-social-facebook"></i></a><a href="#"><i
+                    class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a
+                  href="#"><i class="icon ion-social-instagram"></i></a></div>
+            </div>
+            <p class="copyright">My Roadster © 2018</p>
+          </div>
+        </footer>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+    </div>
+    <!-- End your project here-->
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"></script>
+</body>
 </body>
 
 </html>
