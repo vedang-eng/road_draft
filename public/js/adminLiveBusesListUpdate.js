@@ -25,7 +25,7 @@ let updateBuslive=document.getElementById('updateBuslive');
 
 updateBuslive.addEventListener('click',()=>{
     //parsing the date
-    let newDate = new Date(Date_sheduling_update_live.value);
+    
     //creating the object of the data to send the data to put
     let infoToAdd = {
         bus_number: `${bus_number_bus_update_live.value}`,
