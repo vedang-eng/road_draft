@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>My Roadster Admin</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="/public/img/in.png" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="/public/css/mdb.min.css" />
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            /* height: 100vh; */
+            /* overflow-x: hidden; */
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .hola {
+            background: #B7DEED;
+            background: linear-gradient(to right, #B7DEED 0%, #71CEEF 25%, #21B4E2 75%, #B7DEED 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+
+        }
+
+        #myFoot {
+            margin-top: auto;
+        }
+
+        .buslistUpdet {}
+
+        #updateList {
+            width: 650px;
+        }
+
+        .sectionHeading {
+            text-align: center;
+
+        }
+
+        #myBtn {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Fixed/sticky position */
+            bottom: 20px;
+            /* Place the button at the bottom of the page */
+            right: 30px;
+            /* Place the button 30px from the right */
+            z-index: 99;
+            /* Make sure it does not overlap */
+            border: none;
+            /* Remove borders */
+            outline: none;
+            /* Remove outline */
+            background-color: #ffffff;
+            /* Set a background color */
+            color: rgb(19, 18, 18);
+            /* Text color */
+            cursor: pointer;
+            /* Add a mouse pointer on hover */
+            padding: 15px;
+            /* Some padding */
+            border-radius: 100%;
+            /* Rounded corners */
+            font-size: 18px;
+            /* Increase font size */
+        }
+
+        #myBtn:hover {
+            background-color: #555;
+            /* Add a dark-grey background on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- top button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top" class="btn btn-primary"><img
+            src="/public/img/icons8-up-arrow-30.png" alt=""></button>
+    <!-- Start your project here-->
+    <div id="navBar" >
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Navbar brand -->
+                    <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                        <!-- <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15" alt="MDB Logo"
+              loading="lazy" /> -->
+                        <div class="container-fluid">
+                            <span class="navbar-brand mb-0 h1 hola">My Roadster</span>
+                        </div>
+                    </a>
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#bus_list">Bus List Section</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#live_buses_list">Live Bus Update</a>
+                        </li>
+
+                    </ul>
+                    <!-- Left links -->
+                </div>
+                <!-- Collapsible wrapper -->
+
+                <!-- Right elements -->
+                <div class="d-flex align-items-center">
+                    <!-- Icon -->
+
+
+                    <!-- Notifications -->
+
+                    <!-- Avatar -->
+                    <div class="dropdown">
+                        <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
+                            id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle"
+                                height="25" alt="Black and White Portrait of a Man" loading="lazy" />
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                            <li>
+                                <a class="dropdown-item" href="#">My profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Settings</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Right elements -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
+    </div>  
+    <div id="messageDiv" class="sticky-top">
+        <!-- <div class="alert alert-warning alert-dismissible fade show sticky-top" style="display:none;" role="alert" id="messageDiv">
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div> -->
+    </div>
+    
+
+
+    <!-- Bus List section -->
+    <div class="buslistUpdet container  my-3 p-3" id="bus_list">
+        <h3 class="sectionHeading mb-5">Update Bus List</h3>
+
+
+        <ul class="nav nav-pills mb-3" id="pills-tab2" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-home-tab2" data-mdb-toggle="pill"
+                    data-mdb-target="#pills-home2" type="button" role="tab" aria-controls="pills-home"
+                    aria-selected="true">
+                    Add
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab2" data-mdb-toggle="pill"
+                    data-mdb-target="#pills-profile2" type="button" role="tab" aria-controls="pills-profile"
+                    aria-selected="false">
+                    Update
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-contact-tab2" data-mdb-toggle="pill"
+                    data-mdb-target="#pills-contact2" type="button" role="tab" aria-controls="pills-contact"
+                    aria-selected="false">
+                    Delete
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="pills-tabContent2">
+
+            <div class="tab-pane fade show active" id="pills-home2" role="tabpanel" aria-labelledby="pills-home-tab2">
+
+                <!-- Add -->
+                <div class="container shadow-4 my-3 p-3 addBus" id="updateList">
+                    <h3>Add Bus</h3>
+
+                    <form id="addBusList">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Bus Number</label>
+                            <input type="text" class="form-control" id="bus_number_bus" aria-describedby="emailHelp">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Arrival Time</label>
+                            <input type="time" class="form-control" id="arrival_time_bus" aria-describedby="emailHelp">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Departure Time</label>
+                            <input type="time" class="form-control" id="Departure_time_bus"
+                                aria-describedby="emailHelp">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Bus From</label>
+                            <input type="text" class="form-control" id="from_where" aria-describedby="emailHelp">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Bus To</label>
+                            <input type="text" class="form-control" id="to_where" aria-describedby="emailHelp">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Date Of Sheduling</label>
+                            <input type="date" class="form-control" id="Date_sheduling" aria-describedby="emailHelp">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Total bus stop</label>
+                            <input type="number" class="form-control" id="total_stops" aria-describedby="emailHelp">
+
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" type="button" id="addBus">Add</button>
+                        </div>
+                    </form>
+
+
+                </div>
+
+
+
+            </div>
+
+            <!-- Update -->
+            <div class="tab-pane fade" id="pills-profile2" role="tabpanel" aria-labelledby="pills-profile-tab2">
+                <!-- content2 -->
+                <div class="container shadow-4 my-3 p-3 updateBus" id="updateList">
+                    <h3>Update Bus</h3>
+
+                    <form id="updateBusList">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Bus Number</label>
+                            <input type="text" class="form-control" id="bus_number_bus_update"
+                                aria-describedby="emailHelp">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Arrival Time</label>
+                            <input type="time" class="form-control" id="arrival_time_bus_update"
+                                aria-describedby="emailHelp">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Departure Time</label>
+                            <input type="time" class="form-control" id="Departure_time_bus_update"
+                                aria-describedby="emailHelp">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Bus From</label>
+                            <input type="text" class="form-control" id="from_where_update" aria-describedby="emailHelp">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Bus To</label>
+                            <input type="text" class="form-control" id="to_where_update" aria-describedby="emailHelp">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Date Of Sheduling</label>
+                            <input type="date" class="form-control" id="Date_sheduling_update"
+                                aria-describedby="emailHelp">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Total bus stop</label>
+                            <input type="number" class="form-control" id="total_stops_update"
+                                aria-describedby="emailHelp">
+
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" type="button" id="updateBus">Update</button>
+                        </div>
+                    </form>
+
+                </div>
+
+
+            </div>
+
+            <div class="tab-pane fade" id="pills-contact2" role="tabpanel" aria-labelledby="pills-contact-tab2">
+                <!-- content3 -->
+                <div class="container shadow-4 my-3 p-3 updateBus" id="updateList">
+                    <h3>Delete Bus</h3>
+
+                    <form id="deleteBusForm">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Bus Number</label>
+                            <input type="text" class="form-control" id="bus_number_bus_delete"
+                                aria-describedby="emailHelp">
+
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" type="button" id="deleteBus">Delete</button>
+                        </div>
+                    </form>
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+    <!-- Live bus list -->
+    <div class="liveBusUpdet container  my-4 p-3" id="live_buses_list">
+        <h3 class="sectionHeading mb-5">Live Bus List Update</h3>
+
+
+        <ul class="nav nav-pills mb-3" id="pills-tab2" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-home-tab2" data-mdb-toggle="pill"
+                    data-mdb-target="#pills-home2" type="button" role="tab" aria-controls="pills-home"
+                    aria-selected="true">
+                    Update
+                </button>
+            </li>
+        </ul>
+
+
+        <div class="tab-pane fade show active" id="pills-home2" role="tabpanel" aria-labelledby="pills-home-tab2">
+            <!-- content2 -->
+            <div class="container shadow-4 my-3 p-3 updateBus" id="updateList">
+                <h3>Update Bus</h3>
+
+                <form id="updateLiveList">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Bus Number</label>
+                        <input type="text" class="form-control" id="bus_number_bus_update_live"
+                            aria-describedby="emailHelp">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Platform Number</label>
+                        <input type="number" class="form-control" id="platform_number_bus_update_live"
+                            aria-describedby="emailHelp">
+
+                    </div>
+                    
+                    
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Bus From</label>
+                        <input type="text" class="form-control" id="from_where_update_live"
+                            aria-describedby="emailHelp">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Bus To</label>
+                        <input type="text" class="form-control" id="to_where_update_live" aria-describedby="emailHelp">
+
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Total bus stop</label>
+                        <input type="number" class="form-control" id="total_stops_update_live"
+                            aria-describedby="emailHelp">
+
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="button" id="updateBuslive">Update</button>
+                    </div>
+                </form>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- </div> -->
+
+    <!--footer -->
+    <div class="foot stick-bottom" id="myFoot">
+        <div class="footer-dark">
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3 class="hola">Services</h3>
+                            <ul>
+                                <li><a href="#">Web design</a></li>
+                                <li><a href="#">Development</a></li>
+                                <li><a href="#">Hosting</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3 class="hola">About</h3>
+                            <ul>
+                                <li><a href="#">Company</a></li>
+                                <li><a href="#">Team</a></li>
+                                <li><a href="#">Careers</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 item text">
+                            <h3 class="hola">My Roadster</h3>
+                            <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut
+                                vehicula rhoncus
+                                elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel
+                                in justo.</p>
+                        </div>
+                        <div class="col item social"><a href=""><i class="icon ion-social-facebook"></i></a><a
+                                href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i
+                                    class="icon ion-social-snapchat"></i></a><a href="#"><i
+                                    class="icon ion-social-instagram"></i></a></div>
+                    </div>
+                    <p class="copyright">My Roadster © 2018</p>
+                </div>
+            </footer>
+        </div>
+
+
+    </div>
+
+    <!-- End your project here-->
+
+    <!-- MDB -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript" src="/public/js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Js for upi use -->
+    <script src="/public/js/adminBusListUpdate.js"></script>
+    <script src="/public/js/adminLiveBusesListUpdate.js"></script>
+</body>
+</body>
+
+</html>
