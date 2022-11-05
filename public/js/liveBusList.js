@@ -82,4 +82,4 @@ setInterval(() => {
 
     populating();
 
-}, 90000);
+}, 60000);
