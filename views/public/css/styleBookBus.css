@@ -10,21 +10,18 @@ body {
     font-family: cursive;
     max-height: 100%;
     overflow: auto;
-  /* background-image: url(/img/background_img.jpg); */
- 
-      
-  background: 
-  linear-gradient(
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.6)
-  ),
-      url(/views/public/img/background_img.jpg);
+    /* background-image: url(/img/background_img.jpg); */
+
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6));
 
     /* background-repeat: no-repeat; */
     background-size: 100% 100%;
-   
+
     /* background-image: linear-gradient(to top, #ba1b98 0%, #95beb0 100%); */
-    color: #e5e3e3;
+    color: #d5d4d4;
     overflow-x: hidden;
 }
 
@@ -50,7 +47,7 @@ a {
 .wrapper {
     width: 100%;
     text-align: center;
-    
+
 }
 
 .container {
@@ -124,7 +121,7 @@ div.seatCharts-seat.unavailable {
 }
 
 div.seatCharts-container {
-    border-right: 1px dotted #adadad;
+    /* border-right: 1px dotted #adadad; */
     padding: 20px;
 }
 
